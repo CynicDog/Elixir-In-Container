@@ -1,5 +1,36 @@
 # Elixir in Container ☁️
 
+## Hello World! 
+> This section demonstrates how to run an Elixir app inside a Docker container and interact with it via HTTP and distributed BEAM nodes.
+
+<details> 
+
+#### Pull image from this repository package 
+```bash
+cynocdig@CynicDogs-MacBook % docker pull ghcr.io/cynicdog/containerized_elixir:latest
+```
+
+#### Run Docker container with port 8080 exposed
+```bash
+cynocdig@CynicDogs-MacBook % docker run -p 8080:8080 --rm -d ghcr.io/cynicdog/containerized_elixir:latest
+```
+
+#### httpie to the container..
+```bash
+cynocdig@CynicDogs-MacBook % http :8080/greet
+
+HTTP/1.1 200 OK
+cache-control: max-age=0, private, must-revalidate
+content-length: 59
+content-type: text/plain; charset=utf-8
+date: Tue, 08 Jul 2025 12:26:48 GMT
+server: Cowboy
+
+🚀 Elixir inside a container — greetings from the BEAM!
+```
+
+</details>
+
 
 ## Communicate with an Elixir Node in Docker Container
 > This guide shows how to set up distributed Elixir nodes between your **host machine (macOS)** and a **Docker container** using node names and cookies, and how to call functions remotely.
