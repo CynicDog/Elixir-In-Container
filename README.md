@@ -55,17 +55,16 @@ cynocdig@CynicDogs-MacBook % docker run -it --rm \
   elixir bash
 ```
 
-> [!NOTE]
-> ##### Curious about `host.docker.internal`?
->
-> If you check the container’s `/etc/hosts` file, you’ll see something like:
-> ```bash
-> root@container:/# cat /etc/hosts
-> 127.0.0.1	localhost
-> ::1	        localhost ip6-localhost ip6-loopback
-> ...
-> 192.168.65.254	host.docker.internal
-> ```
+##### Curious about `host.docker.internal`?
+
+If you check the container’s `/etc/hosts` file, you’ll see something like:
+```bash
+root@container:/# cat /etc/hosts
+127.0.0.1	localhost
+::1	        localhost ip6-localhost ip6-loopback
+...
+192.168.65.254	host.docker.internal
+```
 > That `192.168.65.254 host.docker.internal`  line is a special DNS entry Docker provides to containers to reach the host machine.
 
 ##### Start a BEAM node inside the container
