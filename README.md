@@ -1,9 +1,11 @@
 # Elixir in Container ☁️
 
+
 ## Communicate with an Elixir Node in Docker Container
-This guide shows how to set up distributed Elixir nodes between your **host machine (macOS)** and a **Docker container** using node names and cookies, and how to call functions remotely.
+> This guide shows how to set up distributed Elixir nodes between your **host machine (macOS)** and a **Docker container** using node names and cookies, and how to call functions remotely.
 
-
+<details>
+  
 ### On Host Machine 🧑🏻‍💻 
 
 ##### Start a BEAM node on the host machine
@@ -64,9 +66,12 @@ Then, from the container node IEx shell, call the function remotely on the host 
 iex(elixir_node@container)2> Node.spawn(:"host@host.docker.internal", Greet, :say_hello, [])
 ```
 
-## Inspecting and Using `epmd` in a Container 
+</details>
 
-This section explores how to inspect and interact with the **Erlang Port Mapper Daemon (epmd)** inside a running Elixir Docker container. This is useful for understanding how distributed Elixir nodes discover each other via `epmd`.
+## Inspecting and Using `epmd` in a Container 
+> This section explores how to inspect and interact with the **Erlang Port Mapper Daemon (epmd)** inside a running Elixir Docker container. This is useful for understanding how distributed Elixir nodes discover each other via `epmd`.
+
+<details>
 
 #### Start an Elixir Container
 
@@ -124,3 +129,5 @@ root@e9e6d65de9af:/# epmd -names
 epmd: up and running on port 4369 with data:
 name node_in_container_1 at port 33911
 ```
+
+</details>
