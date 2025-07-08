@@ -1,21 +1,13 @@
-# ContainerizedElixir
+# ContainerizedElixir 🚀
 
-**TODO: Add description**
+A minimal Elixir web application running inside a Docker container using [Plug](https://hexdocs.pm/plug) and [Cowboy](https://github.com/ninenines/cowboy).  
 
-## Installation
+This app serves a simple HTTP endpoint `/greet` that responds with a friendly message from the BEAM inside the container.
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `containerized_elixir` to your list of dependencies in `mix.exs`:
+---
 
-```elixir
-def deps do
-  [
-    {:containerized_elixir, "~> 0.1.0"}
-  ]
-end
-```
+## Features
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at <https://hexdocs.pm/containerized_elixir>.
-
+- Simple HTTP server powered by Plug and Cowboy
+- Single `/greet` route responding with a plain-text greeting
+- Designed to run containerized with Docker
